@@ -1,0 +1,73 @@
+<div class="container">
+  <form #productVariable="ngForm" (ngSubmit)="saveData(productVariable)">
+      <div class="form-group">
+          <label for="productId">
+              ProductId
+          </label>
+          <input type="text" ngModel name="productId" id="productId" class="form-control">
+        </div>
+    <div class="form-group">
+      <label for="productName">
+        Product Name:
+      </label>
+      <input type="text" ngModel name="productName" id="productName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="productCode">
+        Product Code:
+      </label>
+      <input type="text" ngModel name="productCode" id="productCode" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="releaseDate">
+        Release Date
+      </label>
+      <input type="date" ngModel name="releaseDate" id="releaseDate" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="description">
+          Description
+      </label>
+      <input type="text" ngModel name="description" id="description" class="form-control">
+    </div>
+   
+    <div class="form-group">
+      <label for="cost">
+          cost
+      </label>
+      <input type="text" ngModel name="cost" id="cost" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="price">
+          price
+      </label>
+      <input type="text" ngModel name="price" id="price" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="genre">
+          genre
+      </label>
+      <input type="text" ngModel name="genre" id="genre" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">
+        imageUrl
+      </label>
+      <input type="text" ngModel name="imageUrl" id="imageUrl" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="starRating">
+          Stars
+        </label>
+        <input type="text" ngModel name="starRating" id="starRating" class="form-control">
+      </div>
+
+
+    <button class="btn btn-primary" type="submit">Save Data</button>
+
+    <br><br>
+
+
+  </form>
+</div>

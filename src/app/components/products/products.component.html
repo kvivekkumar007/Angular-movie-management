@@ -1,0 +1,64 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Product List</h3>
+    <div class="row">
+      <div class="col-sm-6">
+        Search To Filter
+      </div>
+      <div class="col-sm-6">
+        <input type="text" [(ngModel)]=searchText>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        Filtered By:
+      </div>
+
+      <div class="col-sm-6">
+        {{this.searchText}}
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-primary" (click)="toggleImage()">Toggle Image</button>
+            </th>
+            <th>Product</th>
+            <th>Code</th>
+            <th>Release Date</th>
+            <th>Price</th>
+            <th>Compare Price</th>
+            <th>5 Star Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of product | search:searchText" >
+            <td><img *ngIf="showImage" [title]="product.productName" [src]="product.imageUrl" [style.width.px]="imageWidth"
+              [style.margin.px]="imageMargin"></td>
+            <td> <a [routerLink] = "['/product', product.productId]">
+              {{product.productName}}
+            </a></td>
+            <td>{{product.productCode}}</td>
+            <td>{{product.releaseDate}}</td>
+            <td>{{product.price}}</td>
+            <td [ngStyle]="{'color': (product.price | gamecost) === 'High Price' ? 'red' : 'green' }" >{{product.price | gamecost }}</td>
+            <td>{{product.starRating}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<button (click)="onClick()">show Array</button>
+<!-- 
+
+<strong>Borders: </strong><span class="card-text" *ngIf="product.productName.length != 0; else  NoBorder">{{product.productName}}</span>
+
+<ng-template #NoBorder>
+  No Border/your template/Text
+</ng-template> -->

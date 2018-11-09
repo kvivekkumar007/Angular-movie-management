@@ -1,0 +1,35 @@
+<!-- <app-products></app-products>
+
+<div>hello
+  
+</div>
+
+<br>
+<app-review></app-review> -->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+    <!-- Links -->
+    <div class="container">
+
+        <ul class="navbar-nav">
+            <li>
+                <a class="nav-link" [routerLink]="['welcome']">Welcome</a>
+            </li>
+            <li>
+                <a class="nav-link" [routerLink]="['product']">Poducts</a>
+            </li>
+            <li>
+                <a class="nav-link" [routerLink]="['review']">Review</a>
+            </li>
+            <li>
+                <a class="nav-link" [routerLink]="['productDetails']">Product Details</a>
+            </li>
+        </ul>
+    </div>
+
+
+</nav>
+<div class="container" [ngStyle]="{padding: '20px'}">
+    <router-outlet></router-outlet>
+</div>

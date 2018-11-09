@@ -1,0 +1,16 @@
+.banner-background{
+    background-color: #2873E3;
+    margin-bottom: 20px;
+    box-shadow: 15px 15px 5px #e4dfdf;
+}
+
+.text-center{
+    text-align: center;
+    padding: 20px;
+}
+
+.header-text{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
